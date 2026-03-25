@@ -1,17 +1,32 @@
-# Updated TODO.md for Flask API Lesson
+# TODO.md: Flask API Lesson Implementation Plan
 
-## Completed Steps:
-- [x] 1. Read lib/open_library_api.py (complete per README final code).
-- [x] 2. Update code to parse response.json() (done).
-- [x] 3. Add user input for search_term (done).
-- [x] 4. Format response output cleanly (done).
-- [x] 5. Test by executing python lib/open_library_api.py (success).
+## Steps to Complete:
 
-## Pending Steps:
-1. Update TODO.md with progress (current).
-2. Document in README.md (add completion note, screenshot placeholder).
-3. Create feature branch if needed, commit changes (on api_interaction).
-4. Push changes.
-5. Create PR on GitHub.
-6. attempt_completion.
+### 1. Update lib/open_library_api.py to final version
+- [x] Modify get_search_results to accept search_term parameter
+- [x] Change to response.get(URL).json()
+- [x] Add formatted output extraction (Title/Author)
+- [x] Add user input prompt, print formatted result
+- [x] Add explanatory comments
+
+### 2. Test the implementation
+- [x] pipenv shell
+- [x] python lib/open_library_api.py
+- [x] Test with sample input e.g. "the lord of the rings"
+
+### 3. Update TODO.md with progress
+- [x] Mark step 1 complete
+
+### 4. Git workflow
+- [x] git checkout -b api_interaction
+- [x] git add .
+- [x] git commit -am "Finish api interaction"
+- [x] git push origin api_interaction
+
+### 5. Documentation & Finalize
+- [x] Update README.md if needed (screenshot, summary already good)
+- [x] Create PR on GitHub
+- [x] Merge and cleanup branches
+
+**Progress will be updated after each major step.**
 

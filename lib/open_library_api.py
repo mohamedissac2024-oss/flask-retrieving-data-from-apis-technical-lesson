@@ -1,1 +1,26 @@
-import requests&#10;import json&#10;&#10;class Search:&#10;&#10;    def get_search_results(self, search_term):&#10;        search_term_formatted = search_term.replace(" ", "+")&#10;        fields = ["title", "author_name"]&#10;        fields_formatted = ",".join(fields)&#10;        limit = 1&#10;&#10;        URL = f"https://openlibrary.org/search.json?title={search_term_formatted}&amp;fields={fields_formatted}&amp;limit={limit}"&#10;&#10;        response = requests.get(URL).json()&#10;        response_formatted = f"Title: {response['docs'][0]['title']}\nAuthor: {response['docs'][0]['author_name'][0]}"&#10;        return response_formatted&#10;&#10;search_term = input("Enter a book title: ")&#10;result = Search().get_search_results(search_term)&#10;print("Search Result:\n")&#10;print(result)&#10;
+import requests
+import json
+
+class Search:
+
+    def get_search_results(self, search_term):
+        # Format search term for URL (replace spaces with +)
+        search_term_formatted = search_term.replace(" ", "+")
+        fields = ["title", "author_name"]
+        # Formats the list into a comma separated string
+        # output: "title,author_name"
+        fields_formatted = ",".join(fields)
+        limit = 1
+
+        URL = f"https://openlibrary.org/search.json?title={search_term_formatted}&fields={fields_formatted}&limit={limit}"
+
+        response = requests.get(URL).json()
+        # Extract and format the first result for clean display
+        response_formatted = f"Title: {response['docs'][0]['title']}\\nAuthor: {response['docs'][0]['author_name'][0]}"
+        return response_formatted
+
+# Interactive usage
+search_term = input("Enter a book title: ")
+result = Search().get_search_results(search_term)
+print("Search Result:\\n")
+print(result)
