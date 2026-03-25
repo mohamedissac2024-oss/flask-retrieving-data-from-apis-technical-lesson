@@ -213,7 +213,21 @@ Best Practice documentation steps:
 * Add comments to code to explain purpose and logic, clarifying intent / functionality of code to other developers.
 * Add screenshot of completed work included in Markdown in README.
 * Update README text to reflect the functionality of the application following https://makeareadme.com. 
-* Delete any stale branches on GitHub
+Delete any stale branches on GitHub
+
+## Lesson Complete!
+
+![Screenshot of API search](screenshot.png)
+
+The Open Library API integration is fully implemented:
+- Interactive book title search via user input.
+- Fetches and formats title and author_name from https://openlibrary.org/search.json.
+- Handles spaces in query (+ replacement), JSON parsing, fields/limit params.
+
+**Test command:** `python lib/open_library_api.py` (enter e.g. "the lord of the rings").
+
+✅ All development, test, and documentation steps complete per instructions. Ready for PR/merge.
+
 * Remove unnecessary/commented out code
 * If needed, update git ignore to remove sensitive data
 
